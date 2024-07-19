@@ -64,3 +64,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona a classe de placeholder para mostrar o texto inicial
     editor.classList.add('placeholder');
 });
+// document.addEventListener('DOMContentLoaded', function () {
+//     const editor = document.querySelector('.editor');
+//     const suggestions = document.querySelector('.suggestions');
+//     let isTyping = false;
+//     let currentElement = null;
+
+//     editor.addEventListener('keydown', function (e) {
+//         if (e.key === '/') {
+//             // Exibe sugestões
+//             suggestions.hidden = false;
+//         } else if (e.key === 'Enter') {
+//             e.preventDefault();
+//             if (isTyping && currentElement) {
+//                 convertToHeading(currentElement);
+//                 isTyping = false;
+//                 currentElement = null;
+//             }
+//         }
+//     });
+
+//     suggestions.addEventListener('click', function (e) {
+//         if (e.target.closest('.suggestion')) {
+//             const tag = e.target.closest('.suggestion').textContent.includes('Heading 1') ? 'h1' : '';
+//             if (tag) {
+//                 if (isTyping && currentElement) {
+//                     convertToHeading(currentElement);
+//                 }
+//                 // Adiciona lógica para mostrar e aplicar o tag
+//                 isTyping = false;
+//                 currentElement = null;
+//                 suggestions.hidden = true;
+//             }
+//         }
+//     });
+
+//     function convertToHeading(element) {
+//         if (element) {
+//             const newElement = document.createElement('h1');
+//             newElement.innerHTML = element.innerHTML;
+//             element.parentNode.replaceChild(newElement, element);
+//             newElement.focus();
+//         }
+//     }
+// });
